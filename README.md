@@ -2,26 +2,26 @@
 
 Hardhat plugin for integration with Cronoscan's contract verification service.
 
-This plugin needs to be used in conjunction with the [hardhat-etherscan](https://www.npmjs.com/package/@nomiclabs/hardhat-etherscan) plugin.
+This plugin needs to be used in conjunction with the [hardhat-etherscan](https://www.npmjs.com/package/@nomiclabs/hardhat-etherscan) plugin (v3.1.0 or above).
 
 ## Features
 
 Verify the source code for your Solidity contracts on [Cronoscan](https://cronoscan.com/).
 
-Please refer to [hardhat-etherscan](https://www.npmjs.com/package/@nomiclabs/hardhat-etherscan) for more details.
-
 ## Installation
 
 ### 1. Install the package
+
 ```
 # Install hardhat-etherscan plugin
-npm install --save-dev @nomiclabs/hardhat-etherscan
+npm install --save-dev @nomiclabs/hardhat-etherscan@^3.1.0
 
 # Install hardhat-cronoscan plugin
 npm install --save-dev @cronos-labs/hardhat-cronoscan
 ```
 
 ### 2. Import the plugins
+
 In your `hardhat.config.ts`, import the two plugins:
 ```
 ...
@@ -46,9 +46,23 @@ const config: HardhatUserConfig = {
 
 Replace `{YOUR_CRONOSCAN_API_KEY}` with your Cronoscan API key. You can generate your API key by creating an Cronoscan account and generate it [here](https://cronoscan.com/myapikey).
 
+## Tasks
+
+This plugin add the [Cronos](https://cronos.org) network to the `verify` task provided by [hardhat-etherscan](https://www.npmjs.com/package/@nomiclabs/hardhat-etherscan). With this plugin the `verify` task is able to verify Cronos contracts through [Cronoscan](https://cronoscan.org)'s service.
+
+## Usage
+
+In your existing hardhat project, run the following commands
+
+```
+npx hardhat verify --network cronos DEPLOYED_CONTRACT_ADDRESS "Constructor argument 1"
+```
+
+For more advance usage, please refer to hardhat-etherscan's [documentation](https://www.npmjs.com/package/@nomiclabs/hardhat-etherscan/v/3.1.0#user-content-usage).
+
 ## Required plugins
 
-- [hardhat-etherscan](https://www.npmjs.com/package/@nomiclabs/hardhat-etherscan)
+- [hardhat-etherscan](https://www.npmjs.com/package/@nomiclabs/hardhat-etherscan) v3.1.0 or above
 
 ## Configuration
 
