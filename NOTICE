@@ -1,0 +1,6 @@
+This project contains portions of code derived from the following repositories:
+
+* Hardhat TypeScript plugin boilerplate
+ * Copyright (c) 2019 Nomic Labs LLC
+ * License: MIT
+ * Repository: https://github.com/NomicFoundation/hardhat-ts-plugin-boilerplate
