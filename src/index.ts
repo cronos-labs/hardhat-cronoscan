@@ -10,7 +10,7 @@ extendConfig(
       urls: {
         apiURL: "https://api.cronoscan.com/api",
         browserURL: "https://cronoscan.com/",
-      }
+      },
     });
   }
 );

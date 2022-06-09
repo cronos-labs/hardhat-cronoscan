@@ -7,8 +7,8 @@ const config: HardhatUserConfig = {
   solidity: "0.7.3",
   defaultNetwork: "hardhat",
   etherscan: {
-    apiKey: "dummy-api-key"
-  }
+    apiKey: "dummy-api-key",
+  },
 };
 
 export default config;

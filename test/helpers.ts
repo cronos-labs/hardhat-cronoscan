@@ -1,6 +1,6 @@
+import "@nomiclabs/hardhat-etherscan/dist/src/type-extensions";
 import { resetHardhatContext } from "hardhat/plugins-testing";
 import { HardhatRuntimeEnvironment } from "hardhat/types";
-import "@nomiclabs/hardhat-etherscan/dist/src/type-extensions";
 import path from "path";
 
 declare module "mocha" {
