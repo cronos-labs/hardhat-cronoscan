@@ -1,6 +1,6 @@
 {
   "name": "@cronos-labs/hardhat-cronoscan",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Hardhat Cronoscan plugin",
   "repository": "github:cronos-labs/hardhat-cronoscan",
   "author": "Cronos Labs",
@@ -44,7 +44,7 @@
     "typescript": "4.0.3"
   },
   "peerDependencies": {
-    "@nomiclabs/hardhat-etherscan": "3.1.0",
-    "hardhat": "2.0.4"
+    "@nomiclabs/hardhat-etherscan": "^3.1.0",
+    "hardhat": "^2.0.0"
   }
 }
