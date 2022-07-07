@@ -1,6 +1,6 @@
 {
   "name": "@cronos-labs/hardhat-cronoscan",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Hardhat Cronoscan plugin",
   "repository": "github:cronos-labs/hardhat-cronoscan",
   "author": "Cronos Labs",
