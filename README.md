@@ -27,7 +27,7 @@ In your `hardhat.config.ts`, import the two plugins:
 ...
 import "@nomiclabs/hardhat";
 import "@nomiclabs/hardhat-etherscan";
-import "./cronos-plugin";
+import "@cronos-labs/hardhat-cronoscan";
 ...
 ```
 
