@@ -27,7 +27,7 @@ In your `hardhat.config.ts`, import the two plugins:
 ...
 import "@nomiclabs/hardhat";
 import "@nomiclabs/hardhat-etherscan";
-import "./cronos-plugin";
+import "@cronos-labs/hardhat-cronoscan";
 ...
 ```
 
@@ -39,12 +39,15 @@ const config: HardhatUserConfig = {
   etherscan: {
     apiKey: {
       cronos: "{YOUR_CRONOSCAN_API_KEY}",
+      cronosTestnet: "{YOUR_CRONOSCAN_TESTNET_API_KEY}",
     },
   },
 };
 ```
 
 Replace `{YOUR_CRONOSCAN_API_KEY}` with your Cronoscan API key. You can generate your API key by creating an Cronoscan account and generate it [here](https://cronoscan.com/myapikey).
+
+Cronoscan Testnet uses the same API key as Cronoscan (Mainnet). However, it is recommended to generate a new one on the Cronoscan portal and replace `{YOUR_CRONOSCAN_TESTNET_API_KEY}` with it.
 
 ## Tasks
 
@@ -54,8 +57,16 @@ This plugin add the [Cronos](https://cronos.org) network to the `verify` task pr
 
 In your existing hardhat project, run the following commands
 
+### Mainnet 
+
 ```
 npx hardhat verify --network cronos DEPLOYED_CONTRACT_ADDRESS "Constructor argument 1"
+```
+
+### Testnet
+
+```
+npx hardhat verify --network cronosTestnet DEPLOYED_CONTRACT_ADDRESS "Constructor argument 1"
 ```
 
 For more advance usage, please refer to hardhat-etherscan's [documentation](https://www.npmjs.com/package/@nomiclabs/hardhat-etherscan/v/3.1.0#user-content-usage).
@@ -70,12 +81,13 @@ This plugin extends the HardhatUserConfig's EtherscanConfig object with the Cron
 
 You should define your own Cronoscan API key.
 
-This is an example of how to set it. Replace `{YOUR_CRONOSCAN_API_KEY}` with your Cronoscan API key:
+This is an example of how to set it. Replace `{YOUR_CRONOSCAN_API_KEY}` and  `{YOUR_CRONOSCAN_TESTNET_API_KEY}` with your Cronoscan API key:
 ```
 const config: HardhatUserConfig = {
   etherscan: {
     apiKey: {
       cronos: "{YOUR_CRONOSCAN_API_KEY}",
+      cronosTestnet: "{YOUR_CRONOSCAN_TESTNET_API_KEY}",
     },
     customChains: [
       // You can keep other Etherscan custom chains configurations as long as 

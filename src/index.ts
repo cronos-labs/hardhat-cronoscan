@@ -12,5 +12,13 @@ extendConfig(
         browserURL: "https://cronoscan.com/",
       },
     });
+    config.etherscan.customChains.push({
+      network: "cronosTestnet",
+      chainId: 338,
+      urls: {
+        apiURL: "https://api-testnet.cronoscan.com/api",
+        browserURL: "https://testnet.cronoscan.com/",
+      },
+    });
   }
 );
