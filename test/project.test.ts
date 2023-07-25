@@ -20,8 +20,8 @@ describe("Cronoscan Hardhat plugin", function () {
         network: "cronosTestnet",
         chainId: 338,
         urls: {
-          apiURL: "https://api-testnet.cronoscan.com/api",
-          browserURL: "https://testnet.cronoscan.com/",
+          apiURL: "https://cronos.org/explorer/testnet3/api",
+          browserURL: "https://cronos.org/explorer/testnet3/",
         },
       },
     ]);

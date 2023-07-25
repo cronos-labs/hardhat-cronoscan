@@ -1,5 +1,5 @@
 import { extendConfig } from "hardhat/config";
-import { HardhatConfig, HardhatUserConfig, HttpNetworkConfig } from "hardhat/types";
+import { HardhatConfig, HardhatUserConfig } from "hardhat/types";
 
 extendConfig(
   (config: HardhatConfig, userConfig: Readonly<HardhatUserConfig>) => {
