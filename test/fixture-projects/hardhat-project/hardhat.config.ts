@@ -1,4 +1,5 @@
 import { HardhatUserConfig } from "hardhat/types";
+import "@nomicfoundation/hardhat-verify";
 
 // Import plugin
 import "../../../src/index";

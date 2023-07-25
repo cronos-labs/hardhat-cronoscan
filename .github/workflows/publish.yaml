@@ -1,4 +1,4 @@
-name: Publish
+name: Publish to GitHub Releases
 
 on:
   push:
@@ -7,12 +7,12 @@ on:
 
 jobs:
   publish:
-    name: Package and publish to github
+    name: Package and publish to GitHub
     runs-on: ubuntu-latest
     steps:
       - uses: actions/setup-node@v1
         with:
-          node-version: 16
+          node-version: 18
 
       - uses: actions/checkout@v2
       - name: Build

@@ -1,6 +1,6 @@
 {
   "name": "@cronos-labs/hardhat-cronoscan",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Hardhat Cronoscan plugin",
   "repository": "github:cronos-labs/hardhat-cronoscan",
   "author": "Cronos Labs",
@@ -14,8 +14,8 @@
     "hardhat-plugin"
   ],
   "scripts": {
-    "lint:fix": "prettier --write 'src/**/*.{js,ts}' 'test/**/*.{js,ts}' && tslint --fix --config tslint.json --project tsconfig.json",
-    "lint": "tslint --config tslint.json --project tsconfig.json",
+    "lint:fix": "prettier --write 'src/**/*.{js,ts}' 'test/**/*.{js,ts}' && eslint --fix --config .eslintrc.js --ext .ts src/",
+    "lint": "eslint --config .eslintrc.js --ext .ts src/",
     "test": "mocha --exit --recursive 'test/**/*.test.ts'",
     "build": "tsc",
     "watch": "tsc -w",
@@ -28,23 +28,28 @@
     "README.md"
   ],
   "devDependencies": {
-    "@nomiclabs/hardhat-etherscan": "3.1.0",
-    "@types/chai": "4.1.7",
-    "@types/fs-extra": "5.0.4",
-    "@types/mocha": "5.2.6",
-    "@types/node": "16.0.0",
-    "chai": "4.2.0",
-    "hardhat": "2.0.4",
-    "mocha": "7.1.2",
-    "prettier": "2.0.5",
-    "ts-node": "8.1.0",
-    "tslint": "5.16.0",
-    "tslint-config-prettier": "1.18.0",
-    "tslint-plugin-prettier": "2.3.0",
-    "typescript": "4.0.3"
+    "@nomicfoundation/hardhat-verify": "1.0.4",
+    "@types/chai": "4.3.5",
+    "@types/fs-extra": "11.0.1",
+    "@types/mocha": "10.0.1",
+    "@types/node": "18.17.0",
+    "@typescript-eslint/eslint-plugin": "6.2.0",
+    "@typescript-eslint/eslint-plugin-tslint": "6.2.0",
+    "@typescript-eslint/parser": "6.2.0",
+    "chai": "4.3.7",
+    "eslint": "8.45.0",
+    "eslint-config-prettier": "8.8.0",
+    "eslint-plugin-import": "2.27.5",
+    "eslint-plugin-prefer-arrow": "1.2.3",
+    "eslint-plugin-prettier": "5.0.0",
+    "eslint-plugin-unicorn": "48.0.0",
+    "hardhat": "2.17.0",
+    "mocha": "10.2.0",
+    "prettier": "3.0.0",
+    "ts-node": "10.9.0",
+    "typescript": "4.9.3"
   },
   "peerDependencies": {
-    "@nomiclabs/hardhat-etherscan": "^3.1.0",
-    "hardhat": "^2.0.0"
+    "hardhat": "^2.0.4"
   }
 }

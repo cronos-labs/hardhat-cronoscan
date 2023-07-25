@@ -1,4 +1,4 @@
-import "@nomiclabs/hardhat-etherscan/dist/src/type-extensions";
+import "@nomicfoundation/hardhat-verify/dist/src/type-extensions";
 import { resetHardhatContext } from "hardhat/plugins-testing";
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 import path from "path";
