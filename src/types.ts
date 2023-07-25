@@ -1,4 +1,3 @@
-
 // Adopted from https://github.com/NomicFoundation/hardhat/blob/hardhat%402.17.0/packages/hardhat-verify/src/type-extensions.ts
 
 // MIT License

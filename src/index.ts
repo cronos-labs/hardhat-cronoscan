@@ -3,17 +3,17 @@ import { HardhatConfig, HardhatUserConfig } from "hardhat/types";
 
 extendConfig(
   (config: HardhatConfig, userConfig: Readonly<HardhatUserConfig>) => {
-    if (typeof userConfig.etherscan?.apiKey === 'undefined') {
+    if (typeof userConfig.etherscan?.apiKey === "undefined") {
       config.etherscan.apiKey = {
         cronosTestnet: "no-api-key-required",
       };
     } else {
-      if (typeof userConfig.etherscan?.apiKey !== 'string') {
+      if (typeof userConfig.etherscan?.apiKey !== "string") {
         config.etherscan.apiKey = {
           cronosTestnet: "no-api-key-required",
           ...userConfig.etherscan.apiKey,
         };
-      };
+      }
     }
     config.etherscan.customChains.push({
       network: "cronos",
